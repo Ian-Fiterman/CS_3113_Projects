@@ -1,3 +1,13 @@
+/**
+ * Author: Ian Fiterman
+ * Assignment: Project 3: Lunar Lander
+ * Date due: 03/14/2024
+ * I pledge that I have completed this assignment without
+ * collaborating with anyone else, in conformance with the
+ * NYU School of Engineering Policies and Procedures on
+ * Academic Misconduct.
+ **/
+
 #include "CS3113/Constants.h"
 #include "CS3113/Lander.h"
 #include "CS3113/Spaceship.h"

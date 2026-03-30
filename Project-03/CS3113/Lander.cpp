@@ -27,7 +27,7 @@ void Lander::update(float deltaTime, Entity* collidableEntities,
         float landingAngle = fabs(mAngle);
         if (fabs(impactVelocity.x) <= SAFE_LANDING_SPEED
             && fabs(impactVelocity.y) <= SAFE_LANDING_SPEED
-            && landingAngle <= SAFE_LANDING_ANGLE) {
+            && landingAngle <= SAFE_LANDING_ANGLE && isCollidingBottom()) {
             mHasLanded = true;
         } else {
             mHasCrashed = true;

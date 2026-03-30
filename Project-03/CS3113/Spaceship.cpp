@@ -19,12 +19,9 @@ void Spaceship::update(float deltaTime, Entity* collidableEntities,
     // Advance along curve
     mDistance += mDirection * mBaseSpeed * pathScale * deltaTime;
     // Clamp and reverse
-    if (mDistance > mHalfRange) {
-        mDistance = mHalfRange;
-        mDirection = -1.0f;
-    } else if (mDistance < -mHalfRange) {
-        mDistance = -mHalfRange;
-        mDirection = 1.0f;
+    if (mDistance > mHalfRange || mDistance < -mHalfRange) {
+        mDistance = Clamp(mDistance, -mHalfRange, mHalfRange);
+        mDirection *= -1.0f;
     }
     // Update position
     updatePositionFromDistance();
